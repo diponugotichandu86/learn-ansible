@@ -1,9 +1,9 @@
-- name: Demo on loading another file
+- name: Demo on loading file
   hosts: all
   tasks:
-   -name: Print World
-   ansible.builtin.debug:
-     msg: Hello Ansible World
-  -name: Include Universe
-  ansible.builtin.include_tasks:
-     file: universe.yml
+    - name: Print Hello World
+      ansible.builtin.debug:
+        msg: Hello Ansible World
+    - name: Include Universe File
+      ansible.builtin.include_tasks:
+        file: universe.yml
